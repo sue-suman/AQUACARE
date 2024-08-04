@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaCare - Clean Water and Sanitation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>AquaCare</h1>
+        <p>
+          Ensuring Safe Drinking Water through Community Testing and Resource
+          Management
+        </p>
+      </header>
+
+      <section class="water-quality">
+        <h2>Current Water Quality</h2>
+        <div class="quality-data">
+          <p>pH Level: <span id="ph-level">Loading...</span></p>
+          <p>Turbidity: <span id="turbidity">Loading...</span></p>
+          <p>Contaminants: <span id="contaminants">Loading...</span></p>
+        </div>
+      </section>
+
+      <section class="community-testing">
+        <h2>Submit Water Test Results</h2>
+        <form id="test-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required />
+
+          <label for="ph">pH Level:</label>
+          <input type="number" step="0.01" id="ph" name="ph" required />
+
+          <label for="turbidity">Turbidity (NTU):</label>
+          <input
+            type="number"
+            step="0.01"
+            id="turbidity"
+            name="turbidity"
+            required
+          />
+
+          <label for="contaminants">Contaminants:</label>
+          <input type="text" id="contaminants" name="contaminants" required />
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="submission-result"></div>
+      </section>
+
+      <section class="resources">
+        <h2>Resource Management</h2>
+        <div class="resource-info">
+          <p>Water Conservation Tips</p>
+          <ul>
+            <li>Fix leaks promptly.</li>
+            <li>Use water-saving fixtures.</li>
+            <li>Collect rainwater for irrigation.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
